@@ -1,0 +1,1074 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Cleeny - Cleaning Services HTML5 Template</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" sizes="56x56" href="assets/images/fav-icon/icon.png">
+	<!-- bootstrap CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all">
+	<!-- carousel CSS -->
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css" type="text/css" media="all">	
+	<!-- animate CSS -->
+	<link rel="stylesheet" href="assets/css/animate.css" type="text/css" media="all">	
+	<!-- animated-text CSS -->
+	<link rel="stylesheet" href="assets/css/animated-text.css" type="text/css" media="all">	
+	<!-- font-awesome CSS -->
+	<link rel="stylesheet" href="assets/css/all.min.css" type="text/css" media="all">	
+	<!-- font-flaticon CSS -->
+	<link rel="stylesheet" href="assets/css/flaticon.css" type="text/css" media="all">	
+	<!-- theme-default CSS -->
+	<link rel="stylesheet" href="assets/css/theme-default.css" type="text/css" media="all">	
+	<!-- meanmenu CSS -->
+	<link rel="stylesheet" href="assets/css/meanmenu.min.css" type="text/css" media="all">	
+	<!-- Main Style CSS -->
+	<link rel="stylesheet"  href="style.css" type="text/css" media="all">
+	<!-- transitions CSS -->
+	<link rel="stylesheet" href="assets/css/owl.transitions.css" type="text/css" media="all">
+	<!-- venobox CSS -->
+	<link rel="stylesheet" href="venobox/venobox.css" type="text/css" media="all">
+	<!-- responsive CSS -->
+	<link rel="stylesheet" href="assets/css/responsive.css" type="text/css" media="all">
+	<!-- modernizr js -->	
+	<script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>	
+	<!-- bootstrap icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+<style>
+ .text {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            max-width: 100%;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .card p {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+           
+            }
+        }
+		        .values-container {
+            
+            text-align: center;
+        }
+
+        .values-container h1 {
+       
+            font-weight: 600;
+            color: #333;
+         
+        }
+
+        .values-container p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        .values-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .value-column {
+            width: 320px;
+            background-color: #fff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .value-column:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .value-column h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .value-column p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .values-grid {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+		 .Whychoose {
+    
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: #1d3557;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      color: #2a2a2a;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    strong {
+      color: #1d3557;
+    }
+
+    @media (max-width: 600px) {
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+	   .offer-section {
+      
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #e5e5e5;
+    }
+
+    .offer-section h1 {
+      font-size: 3em;
+      color: #00197e;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .offer-list {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    .offer-list li {
+      color: #002868;
+      font-size: 1.2em;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 600px) {
+      .offer-section h1 {
+        font-size: 2em;
+      }
+
+      .offer-list li {
+        font-size: 1em;
+      }
+
+    }	
+
+	
+    
+		</style>
+	
+</head>
+<body>
+	
+<!--==================================================-->
+<!-- Start cleeny header-top-section -->
+<!--==================================================-->
+
+	<div class="header-top-section style-two">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-6">
+					<div class="header-address-info">
+						<p> <i class="fas fa-hand-spock"></i> Welcome to Proinfracrew</p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="header-top-right text-right">
+						<div class="hendrio-social-icon">
+						<ul>
+							<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+							<li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>	
+						</ul>
+					</div>
+					<div class="phone-number">
+						<p> <i class="fas fa-phone-square-alt"></i> <span>Call :</span> +980 234 4567 </p>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!--==================================================-->
+<!-- end cleeny header-top-section -->
+<!--==================================================-->
+
+
+
+
+
+<!--==================================================-->
+<!-- Start cleeny header-top-section -->
+<!--==================================================-->
+
+<div class="header-top-area">
+	<div class="container">
+		<div class="row align-items-center d-flex">
+			<div class="col-lg-4">
+				<div class="header-address-logo">
+					<a href="index.html"><img src="assets/images/logoooooo.jpg" alt="logo"></a>
+				</div>
+			</div>
+			<div class="col-lg-8">
+				<div class="header-top-left">
+					<div class="cleeny-social-icon">
+					<ul>
+							<li><a href="#"><i class="fas fa-phone-alt"></i>+919902556089</a></li>
+							<li><a href="#"><i class="bi bi-envelope"></i>proinfracrew@gmail.com</a></li>
+							<li class="upper"><a href="#"><i class="bi bi-alarm"></i>Mon - Fri 10am to 7pm</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--==================================================-->
+<!-- end cleeny header-top-section -->
+<!--==================================================-->
+
+
+
+
+<!--==================================================-->
+<!-- Start cleeny Main Menu Area -->
+<!--==================================================-->
+<div id="sticky-header" class="cleeny_nav_manu style-two">
+	<div class="container">
+		<div class="row upper d-flex align-items-center">
+			<div class="col-lg-9">
+				<nav class="cleeny_menu">
+					<ul class="nav_scroll">
+						<li><a href="index.html">Home </i></a>
+							
+						</li>
+						<li><a href="about-us.html">About Us</a></li>
+						<li><a href="#">Service </i></a>
+							<ul class="sub-menu">
+								<li><a href="#">Facility Management Services </a></li>
+								<li><a href="#">Property Maintenance </a></li>
+								<li><a href="#">Civil and Painting Contracts   </a></li>
+								<li><a href="#">Construction Project Management  </a></li>
+							</ul>
+						</li>
+						
+						<li><a href="Career.html">Career</i></a>
+							
+						</li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-lg-3">
+				<div class="sticke-upper d-flex align-items-center">
+					<div class="header-search-btn">
+						<a class="search-box-btn search-box-outer" href="#"><i class="fas fa-search"></i></a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- cleeny Mobile Menu Area -->
+<div class="mobile-menu-area sticky d-sm-block d-md-block d-lg-none ">
+	<div class="mobile-menu">
+		<nav class="cleeny_menu">
+			<ul class="nav_scroll">
+				<li><a href="index.html">Home</a>
+					
+				</li>
+				<li><a href="about-us.html">About Us</a></li>
+				<li><a href="#">Service <i class="bi bi-chevron-down"></i></a>
+					<ul class="sub-menu">
+						<li><a href="service.html">Facility Management Services </a></li>
+						<li><a href="service.html">Property Maintenance </a></li>
+						<li><a href="service.html">Civil and Painting Contracts   </a></li>
+						<li><a href="service.html">Construction Project Management  </a></li>
+					</ul>
+				</li>
+			
+				<li><a href="Career.html">Career</i></a>
+					
+				</li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+<!--==================================================-->
+<!-- End cleeny Main Menu Area -->
+<!--==================================================-->
+
+
+
+
+<!--==================================================-->
+<!-- Start Curser Section Here -->
+<!--==================================================-->
+<div class="curser"></div>
+<div class="curser2"></div>
+<!--==================================================-->
+<!-- Ends Curser Section Here -->
+<!--==================================================-->
+
+
+
+<!--==================================================-->
+<!-- Start cleeny breatcome Area -->
+<!--==================================================-->
+
+    <div class="breatcome-area d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="breatcome-content">
+                        <div class="breatcome-title">
+                            <h1>About Us</h1>
+                        </div>
+                        <div class="breatcome-text">
+                            <!-- <ul>
+                                <li><a href="index.html"><i class="bi bi-house-door-fill"></i>Cleeny</a></li>
+                                <li class="upper">About Us</li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="breatcome-shape">
+                <img src="assets/images/breatcome-shape.png" alt="breatcome-shape">
+            </div>
+        </div>
+		<div class="intro__bg">
+			<canvas id="intro__canvas" data-colors='["#FFC703", "#ffff", "#2F6DFF"]'></canvas>
+		</div>
+    </div>
+
+<!--==================================================-->
+<!-- end cleeny breatcome Area -->
+<!--==================================================-->
+
+
+
+
+
+
+
+<!--==================================================-->
+<!-- Start cleeny about Area -->
+<!--==================================================-->
+
+<div class="about-area">
+	<div class="container">
+		<div class="row about align-items-center" style="    --bs-gutter-x
+		: 8.5rem !important;
+		">
+			<div class="col-lg-6">
+				<div class="about-thumb">
+					<img src="assets/images/about12.png" alt="about-thumb">
+					<div class="about-shape bounce-animate3">
+						<img src="assets/images/about-shape.png" alt="about-shape">
+					</div>
+					<!-- <div class="video-icon">	
+						<a class="video-vemo-icon venobox vbox-item" data-vbtype="youtube" data-autoplay="true" href="https://www.youtube.com/watch?v=Wx48y_fOfiY"><i class="bi bi-play"></i></a>
+					</div> -->
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="section-title text-left">
+					<h5 class="section-sub-title">ABOUT US</h5>
+					<h1 class="section-main-title">Welcome to PROINFRAcrew</h1>
+					<!-- <h1 class="section-main-title">For Looks As a New</h1> -->
+					<p class="section-title-descr">Where infrastructure meets innovation, and service meets precision. At Proinfra Crew, we believe professionalism, safety, and sustainability are the pillars of modern living and facility management. We don't just build and manage properties — we enhance lifestyles through trust, technology, and tailored service delivery.</p>
+						<!-- <h1 class="section-main-title">Welcome to PROINFRAcrew</h1> -->
+						<p class="section-title-descr">Proinfra Crew was established with the vision of delivering professionally trained, disciplined, and reliable security and facility management services. Founded and led by a renowned construction professional from South India, our team brings deep industry insight, operational excellence, and strong leadership to every engagement.
+
+We are one of the most trusted providers of security and facility management solutions across South India, catering to a diverse client base that includes government institutions, corporate offices, residential communities, retail environments, and industrial sectors such as petrochemicals.</p>
+				</div>
+			
+			
+			</div>
+		</div>
+		<div class="about-shape2">
+			<img src="assets/images/about-shape2.png" alt="about-shape2">
+		</div>
+	</div>	
+</div>
+
+
+
+	<!-- <div class="work-area style-three">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-title text-center">
+						<h5 class="section-sub-title">working process</h5>
+						<h1 class="section-main-title">Easy Steps to Works</h1>
+						<p class="section-title-descr">Competently repurpose go forward benefits without goal-oriented ROI
+						conveniently target e-business opportunities whereas</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="work-single-box">
+						<div class="work-icon">
+							<img src="assets/images/work-icon.png" alt="work-icon">
+							<div class="work-number">
+								<span>1</span>
+							</div>
+						</div>
+						<div class="work-content">
+							<h3 class="work-title">Find Us Online</h3>
+							<p class="work-description">Repurpose go forward benefits more conveniently e-business</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="work-single-box">
+						<div class="work-icon">
+							<img src="assets/images/work-icon2.png" alt="work-icon">
+							<div class="work-number">
+								<span>2</span>
+							</div>
+						</div>
+						<div class="work-content">
+							<h3 class="work-title">Choose Services</h3>
+							<p class="work-description">Repurpose go forward benefits more conveniently e-business</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="work-single-box">
+						<div class="work-icon">
+							<img src="assets/images/work-icon3.png" alt="work-icon">
+							<div class="work-number">
+								<span>3</span>
+							</div>
+						</div>
+						<div class="work-content">
+							<h3 class="work-title">Book Appoinment</h3>
+							<p class="work-description">Repurpose go forward benefits more conveniently e-business</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="work-shape">
+				<img src="assets/images/work-shape.png" alt="work-shape">
+			</div>
+			<div class="work-shape2">
+				<img src="assets/images/work-shape2.png" alt="work-shape2">
+			</div>
+			<div class="work-shape3 bounce-animate4">
+				<img src="assets/images/work-shape3.png" alt="work-shape3">
+			</div>
+			<div class="work-shape4 bounce-animate5">
+				<img src="assets/images/work-shape4.png" alt="work-shape4">
+			</div>
+		</div>
+	</div> -->
+
+
+<div class="values-container">
+    <h1>Our integrated offerings span</h1>
+    <!-- <p>We are committed to maintaining a strong value structure that guides our operations and fosters a productive environment.</p> -->
+
+    <div class="values-grid">
+        <div class="value-column">
+            <h2>Facility Management Services</h2>
+            <p>Housekeeping, security, waste management, and vendor coordination</p>
+        </div>
+
+        <div class="value-column">
+            <h2>Property<br> Maintenance</h2>
+            <p>Plumbing, electrical repairs, HVAC, AMC-based services.</p>
+        </div>
+
+        <div class="value-column">
+            <h2>Civil and Painting<br> Contracts</h2>
+            <p>Interior and exterior painting, building renovation, civil repairs</p>
+        </div>
+
+        <div class="value-column">
+            <h2>Construction Project Management</h2>
+            <p>Turnkey execution, manpower deployment, site supervision.</p>
+        </div>
+	</div>
+<!--==================================================-->
+<!-- end cleeny work Area -->
+<!--==================================================-->
+
+	 <div style="max-width: 800px; margin: auto; margin-top: 20px;">
+    <h1 style="font-size: 2em; margin-bottom: 0.2em;">What is Facility Management?</h1>
+    <p style="font-size: 1em;">
+      Facility Management (FM) refers to the professional coordination of building operations and services—such as housekeeping, electrical and plumbing maintenance, waste disposal, and security—to ensure a clean, safe, and functional environment.
+    </p>
+    <p style="font-size: 1em;">
+      At Proinfra Crew, we offer both Annual Maintenance Contracts (AMCs) and dedicated workforce models to meet the unique needs of our clients across South India. Our focus is on minimizing downtime, streamlining operations, and enhancing infrastructure performance.
+    </p>
+  </div>
+
+<!--==================================================-->
+<!-- Start cleeny team Area -->
+<!--==================================================-->
+
+	 <div class="Whychoose">
+    <h2 class="section-title">Why Choose <span style="color:#457b9d;">Proinfra Crew</span>?</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Comprehensive Contracting Services</h3>
+        <p>From minor <strong>civil works</strong> to full-scale <strong>construction and renovation</strong>, we offer scalable, customized solutions.</p>
+      </div>
+      <div class="card">
+        <h3>Trusted Vendor Network</h3>
+        <p>We collaborate with verified vendors across <strong>plumbing, electrical, painting, and security services</strong>, ensuring reliability.</p>
+      </div>
+      <div class="card">
+        <h3>Transparent Operations</h3>
+        <p>Our contracts are clear, measurable, and free from hidden charges.</p>
+      </div>
+      <div class="card">
+        <h3>Regional Expertise</h3>
+        <p>With a deep understanding of South India’s infrastructure, compliance needs, and workforce logistics, we ensure smooth execution from start to finish.</p>
+      </div>
+    </div>
+  </div>
+	
+
+
+<!--==================================================-->
+<!-- end cleeny team Area -->
+<!--==================================================-->
+
+
+<!--==================================================-->
+
+
+<div class="testimonial-area">
+	<div class="container-fluid">
+		<div class="row testi">
+			<div class="col-lg-12">
+				<div class="section-title text-center">
+					<h5 class="section-sub-title">Testimonials</h5>
+					<h1 class="section-main-title">Our Customer’s Feedback</h1>
+				</div>
+			</div>
+			<div class="testimonial_list owl-carousel">
+				<div class="col-lg-12 col-lg-12">
+					<div class="testi-single-box">
+						<div class="testi-author d-flex align-items-center">
+							
+							<div class="testi-degicnation">
+								<ul class="testi-rating">
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+								</ul>
+								
+							</div>
+						</div>
+						<div class="testi-content">
+						
+							<p class="testi-description">"We are very happy with Proinfracrew’s services. Their team is always on time, works neatly, and handles everything professionally. Truly dependable for facility, and property maintenance. We recommend them without second thought."
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-lg-12">
+					<div class="testi-single-box">
+						<div class="testi-author d-flex align-items-center">
+							
+							<div class="testi-degicnation">
+								<ul class="testi-rating">
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+								</ul>
+								
+							</div>
+						</div>
+						<div class="testi-content">
+						
+							<p class="testi-description">"Proinfracrew has taken full responsibility for our building’s upkeep. From civil works to facility care, their service is smooth and tension-free. Very cooperative staff and good follow-up. We’re fully satisfied with their work."
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-lg-12">
+					<div class="testi-single-box">
+						<div class="testi-author d-flex align-items-center">
+							
+							<div class="testi-degicnation">
+								<ul class="testi-rating">
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+								</ul>
+								
+							</div>
+						</div>
+						<div class="testi-content">
+							
+							<p class="testi-description">"Excellent service by Proinfracrew! Whether it's electrical, plumbing, or construction work, everything is handled with care. Their staff is polite, responsive, and committed. A trusted partner for all our property and facility needs."
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-lg-12">
+					<div class="testi-single-box">
+						<div class="testi-author d-flex align-items-center">
+							
+							<div class="testi-degicnation">
+								<ul class="testi-rating">
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+								</ul>
+								
+							</div>
+						</div>
+						<div class="testi-content">
+							
+							<p class="testi-description">"We’ve been using Proinfracrew for facility and civil work for over a year now. Their timely support, professional team, and budget-friendly service make them stand out. It’s a great relief having them onboard."
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-lg-12">
+					<div class="testi-single-box">
+						<div class="testi-author d-flex align-items-center">
+							
+							<div class="testi-degicnation">
+								<ul class="testi-rating">
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+								</ul>
+								
+							</div>
+						</div>
+						<div class="testi-content">
+							
+							<p class="testi-description">"Proinfracrew really understands our needs. Their team is well-trained and quick to respond. Whether it's plumbing, cleaning, work, they handle it smoothly. We are very happy with their overall support."
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12 col-lg-12">
+					<div class="testi-single-box">
+						<div class="testi-author d-flex align-items-center">
+							
+							<div class="testi-degicnation">
+								<ul class="testi-rating">
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+									<li><i class="bi bi-star-fill"></i></li>
+								</ul>
+								
+							</div>
+						</div>
+						<div class="testi-content">
+							
+							<p class="testi-description">"Very professional and reliable team. Proinfracrew has helped us maintain our property without any hassles. Their work security, and housekeeping is excellent. We can fully trust them to handle everything."
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--==================================================-->
+<!-- Start cleeny subscribe Area -->
+<!--==================================================-->
+
+
+<div class="subscribe-area">
+	<div class="container-fluid">
+		<div class="row subscribe align-items-center">
+			<div class="col-lg-5 col-md-6">
+				<div class="subscribe-single-box d-flex align-items-center">
+					<div class="subscribe-icon">
+						<img src="assets/images/subscribe-icon.png" alt="subscribe-icon">
+					</div>
+					<div class="subscribe-content">
+						<h4 class="subscribe-text">Call Us Now</h4>
+						<span class="subscribe-number">+919902556089</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<h3 class="subscribe-title">Join us</h3>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="subscribe-form">
+					<form>
+						<div class="form-field">
+							<input type="email" name="EMAIL" placeholder="Enter E-Mail*" required="">
+							<button class="subscribe-button" type="submit">Subscribe</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!--==================================================-->
+<!-- end cleeny subscribe Area -->
+<!--==================================================-->
+
+
+
+
+
+<!--==================================================-->
+<!-- Start cleeny Footer Area -->
+<!--==================================================-->
+
+	<div class="footer-area">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-widget">
+						<div class="footer-logo">
+							<a href="index.html"><img src="assets/images/logoooooo.jpg" alt="footer-logo"></a>
+						</div>
+						<p class="footer-widget-text">Competently repurpose forward conveniently target e-business multipurpose clean</p>
+						<div class="footer-social">
+							<div class="footer-widget-social">
+								<a href="#"><i class="fab fa-facebook-f"></i></a>
+								<a href="#"><i class="fab fa-twitter"></i></a>
+								<a href="#"><i class="fab fa-linkedin-in"></i></a>
+								<a href="#"><i class="fab fa-pinterest-p"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-widget left">
+						<div class="widget-title">
+							<h2>Company</h2>
+						</div>
+						<ul>
+							<li><a href="index.html"> <i class="bi bi-chevron-right"></i> Home</a></li>
+							<li><a href="about-us.html"> <i class="bi bi-chevron-right"></i> About Us</a></li>
+							<li><a href="service.html"> <i class="bi bi-chevron-right"></i> Our Services</a></li>
+							<li><a href="team.html"> <i class="bi bi-chevron-right"></i> Meet Our Team</a></li>
+							<li><a href="blog-grid.html"> <i class="bi bi-chevron-right"></i> Latest Blog</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-resent-post">
+						<div class="widget-title">
+							<h2>Keywords</h2>
+						</div>
+						<div class="single-recent-post-box d-flex align-items-center">
+							
+							<div class="post-content-text">
+								<h4><a href="#">Facility management services in Bangalore</a></h4>
+								
+							</div>
+						</div>
+						<div class="single-recent-post-box d-flex align-items-center">
+							
+							<div class="post-content-text">
+								<h4><a href="#">Property management company in Bangalore</a></h4>
+								
+							</div>
+						</div>
+						<div class="single-recent-post-box d-flex align-items-center">
+							
+							<div class="post-content-text">
+								<h4><a href="#">Civil construction services Bangalore
+								</a></h4>
+								
+							</div>
+						</div>
+						<div class="single-recent-post-box d-flex align-items-center">
+							
+							<div class="post-content-text">
+								<h4><a href="#">Housekeeping services in Bangalore
+								</a></h4>
+								
+							</div>
+						</div>
+						<div class="single-recent-post-box d-flex align-items-center">
+							
+							<div class="post-content-text">
+								<h4><a href="#">Pest control and sanitization Bangalore</a></h4>
+								
+							</div>
+						</div>
+						<div class="single-recent-post-box d-flex align-items-center">
+							
+							<div class="post-content-text">
+								<h4><a href="#">Swimming pool maintenance services Bangalore
+								</a></h4>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-widget right">
+						<div class="widget-title">
+							<h2>Contact Us</h2>
+						</div>
+						<div class="footer-contact-box d-flex">
+							<div class="footer-contact-icon">
+								<a href="#"><i class="bi bi-geo-alt"></i></a>
+							</div>
+							<div class="footer-content">
+								<h3 class="footer-title">Address</h3>	
+								<p class="footer-title">AH45, AH45, Krishna Reddy Industrial Estate, Dooravani Nagar, Bengaluru, Karnataka 560016</p>
+							</div>
+						</div>
+						<div class="footer-contact-box d-flex">
+							<div class="footer-contact-icon">
+								<a href="#"><i class="bi bi-telephone"></i></a>
+							</div>
+							<div class="footer-content">
+								<h3 class="footer-title">Call Us</h3>	
+								<p class="footer-title">+919902556089
+								</p>
+							</div>
+						</div>
+						<div class="footer-contact-box d-flex">
+							<div class="footer-contact-icon">
+								<a href="#"><i class="bi bi-envelope"></i></a>
+							</div>
+							<div class="footer-content">
+								<h3 class="footer-title">Email</h3>	
+								<p class="footer-title">proinfracrew@gmail.com</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-shape">
+				<img src="assets/images/footer-shape.png" alt="footer-shape">
+			</div>
+		</div>
+	</div>
+
+<!--==================================================-->
+<!-- end cleeny Footer Area -->
+<!--==================================================-->
+
+
+
+
+
+
+<!--==================================================-->
+<!-- Start cleeny copyright Area -->
+<!--==================================================-->
+
+
+<div class="copyright-area">
+	<div class="container-fluid">
+		<div class="row copyright">
+			<div class="col-lg-12 col-md-12">
+				<div class="footer-copyright-text">
+					<p>© Copyrights 2024 Cleeny All rights reserved by <span>Dream IT </span></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--==================================================-->
+<!-- end cleeny copyright Area -->
+<!--==================================================-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--==================================================-->
+<!-- Start scrollup section Area -->
+<!--==================================================-->
+<!-- scrollup section -->
+<div class="scroll-area">
+	<div class="top-wrap">
+		<div class="go-top-btn-wraper">
+			<div class="go-top go-top-button">
+				<i class="fas fa-arrow-up"></i>
+				<i class="fas fa-arrow-up"></i>
+			</div>
+		</div>
+	</div>
+</div>
+<!--==================================================-->
+<!-- Start scrollup section Area -->
+<!--==================================================-->
+
+<!--==================================================-->
+<!-- Start Search Popup Area -->
+<!--==================================================-->
+<div class="search-popup">
+	<button class="close-search style-two"><span class="flaticon-multiply"><i class="far fa-times-circle"></i></span></button>
+	<button class="close-search"><i class="bi bi-arrow-up-short"></i></button>
+	<form method="post" action="#">
+		<div class="form-group">
+			<input type="search" name="search-field" value="" placeholder="Search Here" required="">
+			<button type="submit"><i class="fa fa-search"></i></button>
+		</div>
+	</form>
+</div>
+<!--==================================================-->
+<!-- Start Search Popup Area -->
+<!--==================================================-->
+
+	
+	
+	<!-- jquery js -->	
+	<script src="assets/js/vendor/jquery-3.6.2.min.js"></script>
+	<!-- bootstrap js -->	
+	<script src="assets/js/bootstrap.min.js"></script>
+	<!-- carousel js -->
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<!-- counterup js -->
+	<script src="assets/js/jquery.counterup.min.js"></script>
+	<!-- waypoints js -->
+	<script src="assets/js/waypoints.min.js"></script>
+	<!-- wow js -->
+	<script src="assets/js/wow.js"></script>
+	<!-- imagesloaded js -->
+	<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+	<!-- venobox js -->
+	<script src="venobox/venobox.js"></script>
+	<!--  animated-text js -->	
+	<script src="assets/js/animated-text.js"></script>
+	<!-- venobox min js -->
+	<script src="venobox/venobox.min.js"></script>
+	<!-- isotope js -->
+	<script src="assets/js/isotope.pkgd.min.js"></script>
+	<!-- jquery meanmenu js -->	
+	<script src="assets/js/jquery.meanmenu.js"></script>
+	<!-- jquery scrollup js -->	
+	<script src="assets/js/jquery.scrollUp.js"></script>
+	<!-- theme js -->	
+	<script src="assets/js/theme.js"></script>
+	<script src="assets/js/jquery.barfiller.js"></script>
+	<script src="assets/js/typed.js"></script>
+	<!-- testimonial js -->	
+	<script src="assets/js/testimonial.js"></script>
+</body>
+</html>
