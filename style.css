@@ -2889,7 +2889,7 @@ p.footer-title {
     content: "";
     height: 100%;
     width: 28%;
-    background: #F3F4F8;
+    background: white;
     z-index: -1;
     top: 0;
 }
@@ -4920,7 +4920,7 @@ h3.blog-title-two a {
 
 
 .contact-area.style-three {
-    background: url(assets/images/contact-bg2.png);
+    background: url(assets/images/portrait-group-engineers-corporate-managers-standing-factory-looking-camera\ \(2\).jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -4949,15 +4949,18 @@ h3.blog-title-two a {
 
 .contact_title h3 {
     font-size: 40px;
-    line-height: 56px;
-    color: #001819;
+    line-height: 0px;
+    color: blue;
+    
     font-weight: 700;
     font-family: "Inter";
     margin-bottom: 47px;
 }
 
 .contact-area.style-three .form_box input {
-    border: 1px solid #E3E3E3 !important;
+    border: 1px solid #E3E3E3 ;
+    background: #fff;
+
     color: #3a4268;
     font-weight: 300;
     font-family: "Poppins";

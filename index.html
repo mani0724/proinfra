@@ -212,7 +212,7 @@
 			<div class="row align-items-center d-flex">
 				<div class="col-lg-6">
 					<div class="header-address-info">
-						<p> <i class="bi bi-geo-alt"></i>AH45, AH45, Krishna Reddy Industrial Estate, Dooravani Nagar, Bengaluru, Karnataka 560016 <span> <i class="bi bi-envelope-open"></i> proinfracrew@gmail.com </span></p>
+						<p> <i class="bi bi-geo-alt"></i>AH45,Dooravani Nagar, Bengaluru<span> <i class="bi bi-envelope-open"></i> proinfracrew@gmail.com </span></p>
 					</div>
 				</div>
 				<div class="col-lg-6">
@@ -268,10 +268,10 @@
 						</li>
 						<li><a href="service.html">Service </i></a>
 							<ul class="sub-menu">
-								<li><a href="#">Facility Management Services </a></li>
-								<li><a href="#">Property Maintenance </a></li>
-								<li><a href="#">Civil and Painting Contracts   </a></li>
-								<li><a href="#">Construction Project Management  </a></li>
+								<li><a href="service.html">Facility Management Services </a></li>
+								<li><a href="service.html">Property Maintenance </a></li>
+								<li><a href="service.html">Civil and Painting Contracts   </a></li>
+								<li><a href="service.html">Construction Project Management  </a></li>
 							</ul>
 						</li>
 					
@@ -280,9 +280,7 @@
 						</li>
 						<li><a href="contact.html">Contact</a></li>
 					</ul>
-					<div class="header-search-btn">
-						<a class="search-box-btn search-box-outer" href="#"><i class="fas fa-search"></i></a>
-					</div>
+					
 					<div class="cleeny-btn">
 						<a href="contact.html">Get Free Quote</a>
 					</div>
@@ -302,12 +300,12 @@
 				
 				</li>
 				<li><a href="about-us.html">About Us</a></li>
-				<li><a href="#">Service</a>
+				<li><a href="service.html">Service</a>
 				<ul class="sub-menu">
-								<li><a href="Facility.html">Facility Management Services </a></li>
-								<li><a href="Property.html">Property Maintenance </a></li>
-								<li><a href="Civil.html">Civil and Painting Contracts   </a></li>
-								<li><a href="Construction.html">Construction Project Management  </a></li>
+								<li><a href="service.html">Facility Management Services </a></li>
+								<li><a href="service.html">Property Maintenance </a></li>
+								<li><a href="service.html">Civil and Painting Contracts   </a></li>
+								<li><a href="service.html">Construction Project Management  </a></li>
 							</ul>
 				</li>
 			
@@ -447,6 +445,439 @@ healthy.</p>
 <!-- Start cleeny about Area -->
 <!--==================================================-->
 
+<style>
+ 
+    .contact-popup-wrapper {
+       /* This block wraps everything inside this scope */
+   }
+   
+   /* Scoped styles using the wrapper */
+   .contact-popup-wrapper .contact-popup-overlay {
+       position: fixed;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background: rgba(0, 0, 0, 0.6);
+       z-index: 9999;
+       display: none;
+       justify-content: center;
+       align-items: center;
+   }
+   
+   .contact-popup-wrapper .contact-popup-content {
+       background-color: #fff;
+       border-radius: 10px;
+       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+       max-width: 500px;
+       width: 100%;
+       max-height: 85vh;
+       overflow-y: auto;
+       padding: 20px;
+       position: relative;
+       animation: fadeIn 0.3s ease-out;
+   }
+   
+   .contact-popup-wrapper input,
+.contact-popup-wrapper textarea,
+.contact-popup-wrapper select {
+width: 400px;
+font-size: 18px;
+padding: 14px 16px;
+margin-bottom: 15px;
+border: 1px solid #ccc;
+border-radius: 6px;
+box-sizing: border-box;
+}
+
+
+   .contact-popup-wrapper .popup-close-btn {
+       position: absolute;
+       top: 10px;
+       right: 10px;
+       background: transparent;
+       border: none;
+       font-size: 50px;
+       color: #333;
+       cursor: pointer;
+       z-index: 10000;
+   }
+   
+   .contact-popup-wrapper .popup-close-btn:hover {
+       color: #d9534f;
+   }
+   
+   .contact-popup-wrapper .contact-section {
+       background-color: #f8f9fa;
+       padding: 30px;
+       border-radius: 8px;
+   }
+   
+   .contact-popup-wrapper .contact-position-relative {
+       position: relative;
+       border-radius: 8px;
+   }
+   
+   .contact-popup-wrapper .contact-img-filter {
+       width: 100%;
+       height: auto;
+       border-radius: 8px;
+       filter: brightness(0.8);
+       transition: filter 0.3s ease;
+   }
+   
+   .contact-popup-wrapper .contact-img-filter:hover {
+       filter: brightness(1);
+   }
+   
+   .contact-popup-wrapper .overlay {
+       position: absolute;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       background: rgba(0, 0, 0, 0.4);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       color: #fff;
+       font-size: 24px;
+       font-weight: bold;
+       border-radius: 8px;
+   }
+   
+   .contact-popup-wrapper h2,
+   .contact-popup-wrapper .heading {
+       font-size: 22px;
+       font-weight: 600;
+       margin-bottom: 15px;
+   }
+   
+   .contact-popup-wrapper .toast {
+       border-radius: 5px;
+       padding: 10px;
+       display: none;
+       margin-bottom: 15px;
+   }
+   
+   .contact-popup-wrapper .toast-body {
+       display: flex;
+       align-items: center;
+   }
+   
+   .contact-popup-wrapper .toast i {
+       margin-right: 10px;
+   }
+   
+   .contact-popup-wrapper .success_msg {
+       background-color: #d4edda;
+       border: 1px solid #c3e6cb;
+   }
+   
+   .contact-popup-wrapper .error_msg {
+       background-color: #f8d7da;
+       border: 1px solid #f5c6cb;
+   }
+   
+   .contact-popup-wrapper .toast .text-success {
+       color: #28a745;
+   }
+   
+   .contact-popup-wrapper .toast .text-danger {
+       color: #dc3545;
+   }
+   
+   .contact-popup-wrapper .contact-form {
+       display: flex;
+       flex-direction: column;
+       gap: 20px;
+   }
+   
+   .contact-popup-wrapper .contact-form-control {
+       border-radius: 8px;
+       padding: 15px;
+       font-size: 16px;
+       border: 1px solid #ccc;
+       transition: all 0.3s ease;
+   }
+   
+   .contact-popup-wrapper .contact-form-control:focus {
+       border-color: #007bff;
+       box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+   }
+   
+   .contact-popup-wrapper textarea {
+       resize: vertical;
+       height: 150px;
+   }
+   
+   .contact-popup-wrapper .contact-invalid-feedback {
+       color: #dc3545;
+       font-size: 14px;
+   }
+   
+   .contact-popup-wrapper .contact-submit-btn {
+       background-color: #fff;
+       color: #000;
+       font-size: 18px;
+       border: 2px solid #000;
+       padding: 15px;
+       border-radius: 8px;
+       cursor: pointer;
+       transition: all 0.3s ease;
+       font-weight: bold;
+   }
+   
+   .contact-popup-wrapper .contact-submit-btn:hover {
+       background-color: #ddd;
+   }
+   
+   .contact-popup-wrapper input[type="range"] {
+       width: 100%;
+       height: 6px;
+       border-radius: 5px;
+       background: #ddd;
+       outline: none;
+       margin-top: 10px;
+   }
+   
+   .contact-popup-wrapper input[type="range"]::-webkit-slider-thumb {
+       -webkit-appearance: none;
+       appearance: none;
+       width: 18px;
+       height: 18px;
+       background: #007bff;
+       border-radius: 50%;
+       cursor: pointer;
+       box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+   }
+   
+   .contact-popup-wrapper input[type="range"]::-moz-range-thumb {
+       width: 18px;
+       height: 18px;
+       background: #007bff;
+       border-radius: 50%;
+       cursor: pointer;
+   }
+   
+   @keyframes fadeIn {
+       0% {
+           opacity: 0;
+           transform: scale(0.8);
+       }
+       100% {
+           opacity: 1;
+           transform: scale(1);
+       }
+   }
+   
+   @media (max-width: 768px) {
+       .contact-popup-wrapper .contact-popup-content {
+           width: 90%;
+           padding: 15px;
+       }
+   }
+
+   /* Style for the Success Popup */
+.success-popup {
+position: fixed;
+top: 20px;
+left: 50%;
+transform: translateX(-50%);
+background-color: blue;
+color: white;
+padding: 15px;
+border-radius: 5px;
+display: none; /* Hidden by default */
+z-index: 9999; /* Ensure it's above other content */
+font-size: 16px;
+max-width: 400px;
+width: 100%;
+}
+
+.success-popup button {
+background: transparent;
+border: none;
+color: white;
+font-size: 20px;
+position: absolute;
+top: 5px;
+right: 10px;
+cursor: pointer;
+}
+
+</style>        
+        
+   
+   
+<!-- Contact Popup Form -->
+<div class="contact-popup-wrapper">
+    <div id="contactPopup" class="contact-popup-overlay">
+        <div class="contact-popup-content animate-popup">
+            <button id="closeContactPopup" class="popup-close-btn">&times;</button>
+            <section class="contact-section bg-secondary-dark p-4">
+                <div class="r-container">
+                    <div class="row g-4">
+                        <div class="col-12 col-lg-12">
+                            <div class="contact-position-relative mb-3">
+                                <div class="overlay">
+                                    <h2 class="font-1 white">GET IN TOUCH</h2>
+                                </div>
+                            </div>
+                            <div class="text-start">
+                                <!-- Success and Error Messages -->
+                                <div id="successMessage" class="success_msg toast align-items-center w-100 shadow-none mb-3 bg-transparent border border-success rounded-0 my-4"
+                                    role="alert" aria-live="assertive" aria-atomic="true" style="display:none;">
+                                    <div class="d-flex p-2">
+                                        <div class="toast-body f-18 d-flex flex-row gap-3 align-items-center text-success">
+                                            <i class="fa-solid fa-check f-36 text-success"></i>
+                                            Your Message Successfully Sent.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="errorMessage" class="error_msg toast align-items-center w-100 shadow-none border-danger mb-3 bg-transparent my-4 border rounded-0"
+                                    role="alert" aria-live="assertive" aria-atomic="true" style="display:none;">
+                                    <div class="d-flex p-2">
+                                        <div class="toast-body f-18 d-flex flex-row gap-3 align-items-center text-danger">
+                                            <i class="fa-solid fa-triangle-exclamation f-36 text-danger"></i>
+                                            Something Went Wrong! Form Submission Failed.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Contact Form -->
+                                <form action="https://formsubmit.co/hii@gmail.com" method="POST" id="contactForm" class="d-flex flex-column w-100 needs-validation mb-3 contact-form" novalidate>
+                                    <div class="row">
+                                        <!-- Name Input -->
+                                        <div class="col mb-3">
+                                            <input type="text" class="contact-form-control p-3" name="name" id="name" placeholder="Name" required>
+                                            <div class="contact-invalid-feedback"></div>
+                                        </div>
+
+                                        <!-- Email Input -->
+                                        <div class="col mb-3">
+                                            <input type="email" class="contact-form-control p-3" id="email" name="email" placeholder="Email" required>
+                                        </div>
+                                    </div>
+                                     <!-- Event Location Input -->
+
+
+									 <!-- Phone Number Input -->
+<div class="col mb-3">
+    <input type="tel" class="contact-form-control p-3" id="phone" name="phone" placeholder="Phone Number" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number">
+</div>
+
+									 <!-- Choose Service Dropdown -->
+<div class="mb-3">
+    <select class="contact-form-control p-3" name="service" id="service" required>
+        <option value="" disabled selected>Choose Service</option>
+        <option value="facility_management">Facility Management Service</option>
+		<option value="facility_management">Property Maintainenece Service</option>
+        <option value="civil_and_painting">Civil and Painting Service</option>
+        <option value="construction_management">Construction Management Service</option>
+    </select>
+</div>
+
+                                    <!-- Message Textarea -->
+                                    <div class="mb-3">
+                                        <textarea class="contact-form-control" id="message" name="message" rows="5" placeholder="Message"></textarea>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <div class="mb-3 d-flex justify-content-center">
+                                        <button type="submit" class="contact-submit-btn font-2 w-100 py-3">
+                                            SUBMIT
+                                        </button>
+                                    </div>
+
+                                    <!-- Success Popup Message -->
+                                    <div id="successPopup" class="success-popup">
+                                        <span id="successPopupMessage">Thanks for submitting! You can contact 9902556089.</span>
+                                        <button id="closeSuccessPopup" class="close-btn">×</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+
+<script>
+
+window.addEventListener('DOMContentLoaded', function () {
+    openContactPopup();
+});
+
+
+    document.getElementById("contactForm").onsubmit = function(event) {
+        event.preventDefault();  // Prevent form submission to allow custom logic
+
+        fetch('https://formsubmit.co/hii@gmail.com', {
+            method: 'POST',
+            body: new FormData(this)
+        })
+        .then(response => {
+            if (response.ok) {
+                document.getElementById("successMessage").style.display = "block";
+                document.getElementById("contactForm").reset();
+            } else {
+                document.getElementById("errorMessage").style.display = "block";
+            }
+        })
+        .catch(() => {
+            document.getElementById("errorMessage").style.display = "block";
+        });
+    }
+
+function openContactPopup() {
+document.getElementById('contactPopup').style.display = 'flex';
+}
+
+function closeContactPopup() {
+document.getElementById('contactPopup').style.display = 'none';
+}
+
+// Attach close function to the close button
+document.getElementById('closeContactPopup').addEventListener('click', closeContactPopup);
+
+// Optional: Close popup when clicking outside the form
+window.addEventListener('click', function(event) {
+var popup = document.getElementById('contactPopup');
+if (event.target === popup) {
+    closeContactPopup();
+}
+});
+
+// Optional: Handle form submit with success popup (without backend)
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+e.preventDefault();
+
+// Show success message
+document.getElementById('successPopup').style.display = 'block';
+
+// Close popup after short delay
+setTimeout(() => {
+    document.getElementById('successPopup').style.display = 'none';
+    closeContactPopup();
+}, 3000);
+});
+
+// Manual close of success popup
+document.getElementById('closeSuccessPopup').addEventListener('click', function () {
+document.getElementById('successPopup').style.display = 'none';
+});
+</script>
+
+
+
+
+
+
+
+
 	<div class="about-area">
 		<div class="container">
 			<div class="row about align-items-center">
@@ -465,6 +896,7 @@ healthy.</p>
 					<div class="section-title text-left">
 						<h5 class="section-sub-title">ABOUT US</h5>
 						<h1 class="section-main-title">Welcome to PROINFRAcrew</h1>
+
 						<!-- <h1 class="section-main-title">For Looks As a New</h1> -->
 						<p class="section-title-descr">Where infrastructure meets innovation, and service meets precision. At Proinfra Crew, we believe professionalism, safety, and sustainability are the pillars of modern living and facility management. We don't just build and manage properties — we enhance lifestyles through trust, technology, and tailored service delivery.</p>
 					    	<!-- <h1 class="section-main-title">Welcome to PROINFRAcrew</h1> -->
@@ -493,54 +925,72 @@ We are one of the most trusted providers of security and facility management sol
 <!-- start cleeny service Area -->
 <!--==================================================-->
 
-	<div class="service-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="section-title text-center">
-						<h1 class="section-main-title">Get A Free Appoinmnet</h1>
-					</div>
-				</div>
-				<div class="col-lg-12">
-					<div class="contact-from">
-						<form action="https://formspree.io/f/myyleorq" method="POST" id="dreamit-form">
-							<div class="row contact_bg">
-								<div class="col-lg-3 col-md-6">
-									<!--form_box-->
-									<div class="form_box">
-										<input type="text" name="Your name" placeholder="Your Name *">
-									</div>
-								</div>
-								<div class="col-lg-3 col-md-6">
-									<!--form_box-->
-									<div class="form_box">
-										<input type="text" name="Phone" placeholder="Phone No.">
-									</div>
-								</div>
-								<div class="col-lg-3 col-md-6">
-									<!--form_box-->
-									<div class="form_box">
-										<div class="form_field_inner style-two">
-											<select name="contact" id="contact">	
-												<option value="Subject">Select Service</option>
-												<option value="Facility Management service">Facility Management service</option>
-												<option value="Property Maintenance Service">Property Maintenance Service</option>
-												<option value="Civil and Painting Service">Civil and Painting Service</option>
-												<option value="Construction Project Management">Construction Project Management
-											</option>
-											</select>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-3 col-md-6">
-									<div class="contact-form-button">
-										<button type="submit">Book Appoinment<i class="bi bi-arrow-right"></i></button>
-									</div>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
+<div class="service-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title text-center">
+                    <h1 class="section-main-title">Get A Free Appointment</h1>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="contact-from">
+                    <form action="https://formspree.io/f/myyleorq" method="POST" id="dreamit-form">
+                        <div class="row contact_bg">
+                            <div class="col-lg-3 col-md-6">
+                                <!--form_box-->
+                                <div class="form_box">
+                                    <input type="text" name="Your name" placeholder="Your Name *" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <!--form_box-->
+                                <div class="form_box">
+                                    <input type="text" name="Phone" placeholder="Phone No." required>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <!--form_box-->
+                                <div class="form_box">
+                                    <div class="form_field_inner style-two">
+                                        <select name="contact" id="contact" required>    
+                                            <option value="Subject">Select Service</option>
+                                            <option value="Facility Management service">Facility Management service</option>
+                                            <option value="Property Maintenance Service">Property Maintenance Service</option>
+                                            <option value="Civil and Painting Service">Civil and Painting Service</option>
+                                            <option value="Construction Project Management">Construction Project Management</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                                <div class="contact-form-button">
+                                    <button type="submit">Book Appointment<i class="bi bi-arrow-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('dreamit-form').addEventListener('submit', function(event) {
+        // Check if the required fields are filled
+        var name = document.querySelector('input[name="Your name"]');
+        var phone = document.querySelector('input[name="Phone"]');
+        var service = document.querySelector('select[name="contact"]');
+
+        if (!name.value || !phone.value || service.value === "Subject") {
+            // Prevent form submission if any required field is empty
+            alert("Please fill in all required fields.");
+            event.preventDefault(); // Prevent form submission
+        }
+    });
+</script>
+
 				<div class="col-lg-12">
 					<div class="section-title text-center">
 						<h5 class="section-sub-title">our services</h5>
@@ -592,7 +1042,7 @@ healthy.</li>
 					<div class="col-lg-12 col-md-12">
 						<div class="service-single-box">
 							<div class="service-thumb">
-								<img src="assets/images/technicl2.jpeg" alt="service-img">
+								<img src="assets/images/male-electrician-works-switchboard-with-electrical-connecting-cable (1) (1).jpg" alt="service-img">
 							</div>
 							<div class="service-content">
 								<h3 class="service-title">Technical Maintenance (MEP)</h3>
@@ -764,7 +1214,19 @@ healthy.</li>
 
 <!--==================================================-->
 
+<style>.testi-description {
+    position: relative;
+    padding-right: 100px; /* Adjust this to give space for the name */
+}
 
+.testimonial-author {
+    position: absolute;
+    right: 10px;
+    bottom: -20px; /* Adjust this to position the name correctly */
+    font-weight: bold;
+    font-size: 16px; /* Adjust the font size if needed */
+}
+</style>
 	<div class="testimonial-area">
 		<div class="container">
 			<div class="row testi">
@@ -791,10 +1253,11 @@ healthy.</li>
 								</div>
 							</div>
 							<div class="testi-content">
-							
-								<p class="testi-description">"We are very happy with Proinfracrew’s services. Their team is always on time, works neatly, and handles everything professionally. Truly dependable for facility, and property maintenance. We recommend them without second thought."
+								<p class="testi-description">
+									"We are very happy with Proinfracrew’s services. Their team is always on time, works neatly, and handles everything professionally. Truly dependable for facility, and property maintenance. We recommend them without second thought."
+									<span class="testimonial-author">– Dhruv </span>
 								</p>
-							</div>
+							</div>							
 						</div>
 					</div>
 					<div class="col-lg-12 col-lg-12">
@@ -815,6 +1278,8 @@ healthy.</li>
 							<div class="testi-content">
 							
 								<p class="testi-description">"Proinfracrew has taken full responsibility for our building’s upkeep. From civil works to facility care, their service is smooth and tension-free. Very cooperative staff and good follow-up. We’re fully satisfied with their work."
+									<span class="testimonial-author">– Hema </span>
+
 								</p>
 							</div>
 						</div>
@@ -837,6 +1302,8 @@ healthy.</li>
 							<div class="testi-content">
 								
 								<p class="testi-description">"Excellent service by Proinfracrew! Whether it's electrical, plumbing, or construction work, everything is handled with care. Their staff is polite, responsive, and committed. A trusted partner for all our property and facility needs."
+									<span class="testimonial-author">– Ruthvik </span>
+
 								</p>
 							</div>
 						</div>
@@ -859,6 +1326,8 @@ healthy.</li>
 							<div class="testi-content">
 								
 								<p class="testi-description">"We’ve been using Proinfracrew for facility and civil work for over a year now. Their timely support, professional team, and budget-friendly service make them stand out. It’s a great relief having them onboard."
+									<span class="testimonial-author">– Shibasis Dutta </span>
+
 								</p>
 							</div>
 						</div>
@@ -881,6 +1350,8 @@ healthy.</li>
 							<div class="testi-content">
 								
 								<p class="testi-description">"Proinfracrew really understands our needs. Their team is well-trained and quick to respond. Whether it's plumbing, cleaning, work, they handle it smoothly. We are very happy with their overall support."
+									<span class="testimonial-author">– Boyapally Shiva Reddy </span>
+
 								</p>
 							</div>
 						</div>
@@ -903,6 +1374,8 @@ healthy.</li>
 							<div class="testi-content">
 								
 								<p class="testi-description">"Very professional and reliable team. Proinfracrew has helped us maintain our property without any hassles. Their work security, and housekeeping is excellent. We can fully trust them to handle everything."
+									<span class="testimonial-author">– Riju Kunnummal </span>
+
 								</p>
 							</div>
 						</div>
@@ -981,7 +1454,7 @@ healthy.</li>
 							<div class="footer-logo">
 								<a href="index.html"><img src="assets/images/logoooooo.jpg" alt="footer-logo"></a>
 							</div>
-							<p class="footer-widget-text">Competently repurpose forward conveniently target e-business multipurpose clean</p>
+							<p class="footer-widget-text">BEST FACILITY MANAGEMENT RELIABLE FACILITY, PROPERTY MANAGEMENT</p>
 							<div class="footer-social">
 								<div class="footer-widget-social">
 									<a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -1069,7 +1542,7 @@ healthy.</li>
 								</div>
 								<div class="footer-content">
 									<h3 class="footer-title">Address</h3>	
-									<p class="footer-title">AH45, AH45, Krishna Reddy Industrial Estate, Dooravani Nagar, Bengaluru, Karnataka 560016</p>
+									<p class="footer-title">AH45, Dooravani Nagar, Bengaluru</p>
 								</div>
 							</div>
 							<div class="footer-contact-box d-flex">
@@ -1119,7 +1592,7 @@ healthy.</li>
 				<div class="row copyright">
 					<div class="col-lg-12 col-md-12">
 						<div class="footer-copyright-text">
-							<p>© Copyrights 2024 Cleeny All rights reserved by <span>Dream IT </span></p>
+							<p>© Copyrights 2025 All rights reserved by <span>DR Infra Solutions </span></p>
 						</div>
 					</div>
 				</div>
